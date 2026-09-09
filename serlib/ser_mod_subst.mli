@@ -16,7 +16,7 @@
 (* Written by: Emilio J. Gallego Arias and others                       *)
 (************************************************************************)
 
-type delta_resolver = Mod_subst.delta_resolver
+type 'a delta_resolver = 'a Mod_subst.delta_resolver
  [@@deriving sexp,yojson,hash,compare]
 
 type substitution = Mod_subst.substitution

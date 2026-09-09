@@ -19,12 +19,12 @@
 module Names = Ser_names
 
 module OD = struct
-  type t = Mod_subst.delta_resolver
+  type 'a t = 'a Mod_subst.delta_resolver
   let name = "Mod_subst.delta_resolver"
 end
 
-module A_ = SerType.Opaque(OD)
-type delta_resolver = A_.t
+module A_ = SerType.Opaque1(OD)
+type 'a delta_resolver = 'a A_.t
  [@@deriving sexp,yojson,hash,compare]
 
 module OS = struct
